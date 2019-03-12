@@ -31,12 +31,9 @@
             margin: auto;
         }
 
+        body {
 
-
-
-
-
-        body {}
+        }
 
         .container {
             background-color: white;
@@ -52,17 +49,33 @@
 
         .navbar {
             margin: 1em;
-
            background-color:#E0F8F7;
-
-
         }
 
 
-        .motion_g {width: 50%;
+        .motion_g {
+            width: 50%;
             align-items: center;
             display: block;
-            margin: auto;}
+            margin: auto;
+        }
+
+        /* css til javascript - start */
+        /*
+        .navbar-brand {
+            font-size: 2.5rem;
+        }
+
+        .smallnav .navbar-brand {
+            font-size: 1.25rem;
+        }
+
+        .navbar-brand {
+            transition: all 0.4s ease;
+        }
+        */
+        /* css til javascript - slut */
+
     </style>
 
 
@@ -114,8 +127,8 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#top">Top <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#top">Top </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#bio">bio</a>
@@ -256,14 +269,38 @@ Vi er mest kendt for billig øl og bliver forhandlet i Netto-kæden. Udover øl 
     </script>
 
     <script>
+
+        /* kollaps menu ved klik */
+        $('.nav-link').click(function(){
+            var navbar_toggle = $('.navbar-toggler');
+            if (navbar_toggle.is(':visible')) {
+                navbar_toggle.trigger('click');
+            }
+        });
+
+        /* tilføjer/fjerner sticky class til navbar */
+       /*
+       $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('.navbar').addClass("smallnav");
+            }
+            else {
+                $('.navbar').removeClass("smallnav");
+            }
+        });
+        */
+
         /*animer scroll*/
         $('.nav-link').click(function() {
             $('html,body').animate({
 
                 scrollTop: $($(this).attr('href')).offset().top
-            }, 1600);
+            }, 600);
             return false;
         });
+
+
+
     </script>
 </body>
 </html>
