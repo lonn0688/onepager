@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 
     <style>
@@ -98,8 +99,9 @@
         }
 
         .opskrift_billeder:hover {
-            -webkit-filter: drop-shadow(8px 8px 10px gray); /* Safari 6.0 - 9.0 */
-  filter: drop-shadow(8px 8px 10px gray);
+            -webkit-filter: drop-shadow(8px 8px 10px gray);
+            /* Safari 6.0 - 9.0 */
+            filter: drop-shadow(8px 8px 10px gray);
         }
 
         .opskrifter_h {
@@ -114,8 +116,7 @@
 
         /* css til javascript - start */
 
-
-       /* .navbar-brand {
+        /* .navbar-brand {
             font-size: 2.5rem;
         }
 
@@ -127,11 +128,7 @@
             transition: all 0.4s ease;
         }*/
 
-
         /* css til javascript - slut */
-
-
-
 
         /* !!!!!!!!!!!!!!! PC !!!!!!!!!!!!!!!! */
 
@@ -162,12 +159,60 @@
             }
 
             .opskrifter_h {
-            display: block;
-            margin: 4em auto 2em auto;
-        }
+                display: block;
+                margin: 4em auto 2em auto;
+            }
         }
 
 
+
+        nav {
+
+
+            display: flex;
+            flex-direction: column;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+
+
+
+
+        }
+
+
+        a:link {
+            color: #9470db;
+            text-decoration: none;
+            justify-content: space-between;
+
+        }
+
+
+
+
+
+
+
+        a:hover {
+            text-shadow: 2px 2px 30px #34BAFA;
+        }
+
+
+
+        a:active {
+            color: #0000FF;
+
+        }
+
+        .navbar-light .navbar-nav .nav-link.active {
+
+
+
+            color: #34BAFA;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+
+        }
     </style>
 
 
@@ -389,8 +434,9 @@
     </script>
 
     <script>
-
-        $('body').scrollspy({ target: '#scrollspyid' })
+        $('body').scrollspy({
+            target: '#scrollspyid'
+        })
 
         /* kollaps menu ved klik */
         $('.nav-link').click(function() {
@@ -420,7 +466,6 @@
             }, 600);
             return false;
         });
-
     </script>
 
 
