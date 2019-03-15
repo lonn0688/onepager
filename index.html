@@ -111,7 +111,9 @@
         }
 
 
-
+        .flip-card-back {
+            display: none;
+        }
 
 
         /* css til javascript - start */
@@ -162,6 +164,52 @@
                 display: block;
                 margin: 4em auto 2em auto;
             }
+
+                /* image hover flip */
+
+        .flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  z-index: 2;
+}
+
+.flip-card-back {
+  background-color: #34BAFA;
+  color: white;
+  transform: rotateY(180deg);
+  z-index: 1;
+    display: block;
+}
+
+        /* image hover flip slut */
         }
 
 
@@ -293,18 +341,43 @@
         <div class="container">
             <!--3 top billeder-->
             <div class="row">
-                <div class="col-md-4  ">
-
-
-
+                <div class="col-md-4 flip-card">
+                    <div class="flip-card-inner">
+                    <div class="flip-card-front">
                     <img src="Artboard%201.png" class="billde_til_tekst" alt="mad">
-
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>test</h3>
+                            <p>ebhjdfshjkgkj</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4 "><img src="Artboard%202.png" class="billde_til_tekst" alt="mad">
 
-
+                <div class="col-md-4 flip-card">
+                    <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <img src="Artboard%202.png" class="billde_til_tekst" alt="mad">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>test2</h3>
+                            <p>2ebhjdfshjkgkj</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4 "><img src="Artboard%203.png" class="billde_til_tekst" alt="mad"></div>
+
+                <div class="col-md-4 flip-card">
+                    <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <img src="Artboard%203.png" class="billde_til_tekst" alt="mad">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>test2</h3>
+                            <p>2ebhjdfshjkgkj</p>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
