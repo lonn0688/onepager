@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="icon" href="favicon-16x16.png" type="image" sizes="16x16">
+    <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
 
@@ -19,6 +19,8 @@
         /*  * {
             border: 2px dotted pink;
         }*/
+
+        body{position: relative;}
 
         .opskrift_billeder {
             display: block;
@@ -105,6 +107,9 @@
         }
 
 
+
+
+
         /* css til javascript - start */
 
 
@@ -178,7 +183,6 @@
         }
 
 
-
     </style>
 
 
@@ -186,9 +190,12 @@
     <title>Content Marketing Site</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="scrollspyid" data-offset="0">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+
+
+    <nav id="scrollspyid" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="progress-container">
             <div class="progress-bar" id="myBar"></div>
         </div>
@@ -217,6 +224,8 @@
             </ul>
         </div>
     </nav>
+
+
 
     <div class="container-fluid ">
         <!-- Add font awesome icons -->
@@ -381,6 +390,11 @@
 
     </div>
 
+
+
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -390,6 +404,9 @@
     </script>
 
     <script>
+
+        $('body').scrollspy({ target: '#scrollspyid' })
+
         /* kollaps menu ved klik */
         $('.nav-link').click(function() {
             var navbar_toggle = $('.navbar-toggler');
@@ -435,6 +452,9 @@
         }
 
     </script>
+
+
+
 
 </body>
 
